@@ -25,7 +25,7 @@ let currentProduct = null;
 let currentIndex = 0;
 
 /* ================= FETCH PRODUCT ================= */
-fetch(`http://localhost:5000/api/products/${productId}`)
+fetch(`https://trueluv-backend.onrender.com/api/products/${productId}`)
   .then((res) => res.json())
   .then((product) => {
     currentProduct = product;
@@ -77,7 +77,9 @@ fetch(`http://localhost:5000/api/products/${productId}`)
 
 /* ================= RELATED PRODUCTS ================= */
 function loadRelatedProducts(category, currentId) {
-  fetch(`http://localhost:5000/api/products/related/${category}/${currentId}`)
+  fetch(
+    `https://trueluv-backend.onrender.com/api/products/related/${category}/${currentId}`,
+  )
     .then((res) => res.json())
     .then((related) => {
       relatedBox.innerHTML = "";

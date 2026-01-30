@@ -3,7 +3,7 @@ const productList = document.getElementById("productList");
 
 /* ================= LOAD PRODUCTS ================= */
 const loadProducts = () => {
-  fetch("http://localhost:5000/api/products")
+  fetch("https://trueluv-backend.onrender.com/api/products")
     .then((res) => res.json())
     .then((data) => {
       productList.innerHTML = "";
@@ -35,7 +35,7 @@ const loadProducts = () => {
       document.querySelectorAll(".delete-btn").forEach((btn) => {
         btn.addEventListener("click", () => {
           const id = btn.dataset.id;
-          fetch(`http://localhost:5000/api/products/${id}`, {
+          fetch(`https://trueluv-backend.onrender.com/api/products/${id}`, {
             method: "DELETE",
           }).then(() => loadProducts());
         });
@@ -67,7 +67,7 @@ productForm.addEventListener("submit", (e) => {
     return;
   }
 
-  fetch("http://localhost:5000/api/products", {
+  fetch("https://trueluv-backend.onrender.com/api/products", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
