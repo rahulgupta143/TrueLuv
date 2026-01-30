@@ -1,0 +1,471 @@
+/* =====================
+   ROOT & RESET
+===================== */
+:root {
+  --primary: #e91e63;
+  --secondary: #ff80ab;
+  --bg: #fff5f9;
+  --dark: #222;
+  --light: #fff;
+  --gray: #777;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--dark);
+}
+
+/* =====================
+   HEADER
+===================== */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 8%;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+}
+
+.logo a {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.heading ul {
+  display: flex;
+  gap: 35px;
+  list-style: none;
+}
+
+.heading ul li a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 500;
+  position: relative;
+}
+
+.heading ul li a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  transition: 0.3s;
+}
+
+.heading ul li a:hover::after {
+  width: 100%;
+}
+
+.heading1 {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .heading {
+    display: none;
+  }
+  .heading1 {
+    display: block;
+  }
+}
+
+/* =====================
+   PRODUCT DETAIL
+===================== */
+.product-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  padding: 50px 8%;
+  animation: fadeUp 0.6s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== MAIN IMAGE ===== */
+.product-gallery #mainImg {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain; /* full image visible, no crop */
+  border-radius: 15px;
+  background: #fff;
+  padding: 10px;
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+.product-gallery #mainImg:hover {
+  transform: scale(1.05);
+}
+
+/* ===== THUMBNAILS ===== */
+.thumbs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  margin-top: 10px;
+}
+
+.thumbs img {
+  flex: 0 0 auto;
+  width: 60px;
+  height: 60px;
+  object-fit: cover; /* thumbnails fill box */
+  border-radius: 8px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition:
+    border 0.3s,
+    transform 0.2s;
+}
+
+.thumbs img.selected {
+  border-color: var(--primary);
+  transform: scale(1.05);
+}
+
+/* ===== PRODUCT INFO ===== */
+.product-info h2 {
+  font-size: 30px;
+}
+
+.price {
+  font-size: 26px;
+  color: var(--primary);
+  font-weight: 600;
+  margin: 15px 0;
+}
+
+.desc {
+  background: var(--light);
+  padding: 18px;
+  border-left: 5px solid var(--primary);
+  border-radius: 10px;
+  line-height: 1.7;
+  color: var(--gray);
+}
+
+/* ===== DM BUTTON ===== */
+#dmBtn {
+  margin-top: 25px;
+  width: 100%;
+  padding: 15px;
+  border-radius: 30px;
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(233, 30, 99, 0.4);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+#dmBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(233, 30, 99, 0.6);
+}
+
+/* =====================
+   FULL DESCRIPTION
+===================== */
+.fullDesc {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+  margin-top: 10px;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* 2 lines for WebKit */
+  overflow: hidden;
+
+  /* Standard fallback */
+  line-clamp: 2;
+  box-orient: vertical;
+}
+
+.fullDesc.expanded {
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+}
+
+/* SEE MORE BUTTON */
+.see-more {
+  color: var(--primary);
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 5px;
+  display: inline-block;
+  font-weight: 600;
+}
+
+/* =====================
+   RELATED PRODUCTS
+===================== */
+.related-section {
+  padding: 40px 6%;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.related-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.related-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.related-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(233, 30, 99, 0.15);
+}
+
+.related-card img {
+  width: 100%;
+  height: 420px;
+  object-fit: contain; /* full product image */
+  background: #fff;
+  padding: 10px;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+.related-card:hover img {
+  transform: scale(1.05);
+}
+
+.related-card h4 {
+  font-size: 16px;
+  margin: 10px 0 6px;
+}
+
+.related-card .price {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* =====================
+   IMAGE MODAL
+===================== */
+.img-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.img-modal .slider {
+  display: flex;
+  gap: 20px;
+  max-width: 95%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.img-modal .slider::-webkit-scrollbar {
+  display: none;
+}
+
+.img-modal .slider img {
+  max-height: 90vh;
+  border-radius: 12px;
+  scroll-snap-align: center;
+  user-select: none;
+  animation: zoomIn 0.3s ease;
+}
+
+/* CLOSE BUTTON */
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 38px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+  .product-detail {
+    grid-template-columns: 1fr;
+    padding: 30px 5%;
+    gap: 30px;
+  }
+
+  .thumbs img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .related-card img {
+    height: 300px;
+  }
+}
+
+/* LEFT & RIGHT ARROWS IN MODAL */
+.img-modal .slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 30px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10001;
+  user-select: none;
+}
+
+.img-modal .slider-btn.prev {
+  left: 20px;
+}
+
+.img-modal .slider-btn.next {
+  right: 20px;
+}
+
+/* ================= PRODUCT INFO SECTION ================= */
+.product-info-section {
+  margin: 40px 0;
+  padding: 0 15px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* ================= PRODUCT HIGHLIGHTS ================= */
+.product-highlights {
+  background: linear-gradient(145deg, #fefefe, #f1f1f1);
+  border-radius: 16px;
+  padding: 25px 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.product-highlights:hover {
+  transform: translateY(-3px);
+}
+
+.product-highlights h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #222;
+  font-weight: 700;
+}
+
+.product-highlights ul {
+  list-style: disc inside;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.product-highlights ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 10px;
+}
+
+.product-highlights ul li::before {
+  content: "✨";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* ================= TRUST BADGES ================= */
+.trust-badges {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.trust-badges span {
+  display: inline-block;
+  background: #e0f7fa;
+  color: #00796b;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+  cursor: default;
+  transition:
+    transform 0.2s,
+    background 0.3s;
+}
+
+.trust-badges span:hover {
+  transform: translateY(-5px);
+  background: #b2ebf2;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .trust-badges {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .trust-badges span {
+    width: 90%;
+    text-align: center;
+  }
+
+  .product-highlights {
+    padding: 20px 15px;
+  }
+}

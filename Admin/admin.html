@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel | GlowAura</title>
+    <link rel="stylesheet" href="admin.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+      }
+      .admin-container {
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+      }
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .card {
+        background: #fff;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      input,
+      select,
+      button {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      button {
+        background: #ff4081;
+        color: #fff;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .admin-card {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #eee;
+        padding: 10px;
+        border-radius: 8px;
+        background: #fafafa;
+      }
+      .admin-card img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+      .admin-images {
+        display: flex;
+        gap: 5px;
+      }
+      .delete-btn {
+        background: #f44336;
+        padding: 5px 10px;
+        font-size: 14px;
+      }
+      .product-info {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="admin-container">
+      <h2>🛠 Admin Panel</h2>
+
+      <!-- ADD PRODUCT -->
+      <div class="card">
+        <h3>Add Product</h3>
+        <form id="productForm">
+          <input type="text" id="name" placeholder="Product Name" required />
+          <input type="number" id="price" placeholder="Price" required />
+          <select id="category" required>
+            <option value="">Select Category</option>
+            <option value="jewellery">Jewellery</option>
+            <option value="hair">Hair Accessories</option>
+            <option value="cosmetics">Cosmetics</option>
+          </select>
+          <input
+            type="text"
+            id="image"
+            placeholder="Add image URLs separated by comma"
+            required
+          />
+          <p style="font-size: 12px; color: #666">
+            Example: img/product1.jpg,img/product2.jpg,img/product3.jpg
+          </p>
+          <img
+            id="preview"
+            style="
+              width: 100%;
+              display: none;
+              margin-top: 10px;
+              border-radius: 10px;
+            "
+          />
+          <label>Stock Status</label>
+          <select id="stock">
+            <option value="In Stock">In Stock</option>
+            <option value="Out of Stock">Out of Stock</option>
+          </select>
+
+          <input
+            type="text"
+            id="desc"
+            placeholder="Product Description"
+            required
+          />
+
+          <input
+            type="text"
+            id="fullDesc"
+            placeholder="Full Description (Product Detail Page)"
+            required
+          />
+
+          <button type="submit">Add Product</button>
+        </form>
+      </div>
+      <select id="stock" required>
+        <option value="">Select Stock Status</option>
+        <option value="In Stock">In Stock</option>
+        <option value="Out of Stock">Out of Stock</option>
+      </select>
+
+      <!-- ALL PRODUCTS -->
+      <div class="card">
+        <h3>All Products</h3>
+        <div id="productList"></div>
+      </div>
+    </div>
+
+    <script src="admin.js"></script>
+  </body>
+</html>

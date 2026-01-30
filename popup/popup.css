@@ -1,0 +1,190 @@
+/* ===== SLIM POPUP - LEFT ===== */
+.popup-slim {
+  position: fixed;
+  bottom: 40px;
+  left: -280px; /* hidden initially */
+  width: 240px;
+  background: linear-gradient(135deg, #fde4ec, #fff0f5);
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+  padding: 10px 12px;
+  display: flex;
+  gap: 10px;
+  pointer-events: all;
+  font-family: "Poppins", sans-serif;
+  transition:
+    left 0.9s ease,
+    transform 0.3s ease; /* fast slide-in/out */
+  overflow: hidden;
+}
+
+/* Product image container */
+.popup-img {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+}
+
+.popup-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  animation: shine 2s infinite linear;
+}
+
+/* Sparkle effect */
+.popup-img .sparkle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  border-radius: 50%;
+  top: 10px;
+  left: 10px;
+  box-shadow: 0 0 8px #fff;
+  animation: sparkle 1.5s infinite;
+}
+
+/* Floating hearts */
+@keyframes heartFloat {
+  0% {
+    transform: translateY(0) scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50px) scale(1) opacity 0;
+  }
+}
+
+.heart {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #e75480;
+  clip-path: polygon(
+    50% 0%,
+    61% 12%,
+    75% 12%,
+    88% 25%,
+    100% 38%,
+    75% 62%,
+    50% 100%,
+    25% 62%,
+    0% 38%,
+    12% 25%,
+    25% 12%,
+    39% 12%
+  );
+  animation: heartFloat 1.5s ease-out forwards;
+}
+
+/* Info */
+.popup-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.popup-info .popup-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 2px;
+  color: #7a3b69;
+}
+
+.popup-info .popup-price {
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+  color: #e75480;
+}
+
+.popup-info .popup-btn {
+  text-decoration: none;
+  background: #25d366;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-align: center;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.popup-info .popup-btn:hover {
+  transform: scale(1.05);
+  background: #20b858;
+}
+
+/* Close button */
+.popup-close {
+  position: absolute;
+  top: 3px;
+  right: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.2s ease;
+}
+
+.popup-close:hover {
+  color: #e75480;
+}
+
+/* Shine effect */
+@keyframes shine {
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.4);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+/* Sparkle animation */
+@keyframes sparkle {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5) rotate(45deg);
+    opacity: 0.7;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .popup-slim {
+    width: 200px;
+    bottom: 25px;
+    left: -240px;
+    padding: 8px 10px;
+  }
+
+  .popup-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .popup-info .popup-name {
+    font-size: 0.85rem;
+  }
+
+  .popup-info .popup-price {
+    font-size: 0.75rem;
+  }
+
+  .popup-info .popup-btn {
+    padding: 3px 10px;
+    font-size: 0.7rem;
+  }
+}

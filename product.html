@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details | TrueLuv</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/product.css" />
+    <link rel="stylesheet" href="popup/popup.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo"><a href="#">TrueLuv</a></div>
+
+      <!-- DESKTOP MENU -->
+      <nav class="heading">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="jewellery.html">JEWELLERY</a></li>
+          <li><a href="hair.html">HAIR ACCESSORIES</a></li>
+          <li><a href="cosmetics.html">COSMETICS</a></li>
+        </ul>
+      </nav>
+
+      <!-- HAMBURGER ICON -->
+      <div class="heading1">
+        <ion-icon name="menu" class="ham"></ion-icon>
+      </div>
+
+      <!-- MOBILE MENU -->
+      <div class="menu">
+        <ion-icon name="close" class="close"></ion-icon>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="jewellery.html">JEWELLERY</a></li>
+          <li><a href="hair.html">HAIR ACCESSORIES</a></li>
+          <li><a href="cosmetics.html">COSMETICS</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- ===== PRODUCT DETAILS ===== -->
+    <section class="product-detail">
+      <div class="product-gallery">
+        <img id="mainImg" src="" alt="Product" />
+        <div class="thumbs" id="thumbs"></div>
+      </div>
+
+      <div class="product-info">
+        <h2 id="pName"></h2>
+        <p id="pStock"></p>
+
+        <p class="price" id="pPrice"></p>
+        <p id="pStock" class="stock"></p>
+
+        <p class="desc" id="pDesc">desc</p>
+        <p class="fullDesc" id="pFullDesc">fullDesc</p>
+        <span class="see-more" id="seeMore">See more</span>
+        <button id="dmBtn" class="btn">DM to Order</button>
+      </div>
+    </section>
+
+    <section class="product-detail" id="productSkeleton">
+      <div class="product-gallery">
+        <div class="skeleton-img"></div>
+      </div>
+
+      <div class="product-info">
+        <div class="skeleton-line w60"></div>
+        <div class="skeleton-line w40"></div>
+        <div class="skeleton-line w100"></div>
+        <div class="skeleton-btn"></div>
+      </div>
+    </section>
+
+    <div class="img-modal" id="imgModal">
+      <span class="close-modal" onclick="closeModal()">×</span>
+      <div class="slider" id="modalSlider"></div>
+
+      <!-- ARROWS -->
+      <div class="slider-btn prev">❮</div>
+      <div class="slider-btn next">❯</div>
+    </div>
+
+    <!-- ===== RELATED PRODUCTS ===== -->
+    <section class="related-section">
+      <h2 class="section-title">Related Products</h2>
+      <div class="products" id="relatedProducts"></div>
+    </section>
+    <div class="product-card skeleton"></div>
+
+    <!-- ================= PRODUCT INFO SECTION ================= -->
+    <div class="product-info-section">
+      <!-- ⭐ PRODUCT HIGHLIGHTS -->
+      <div class="product-highlights">
+        <h3>Product Highlights</h3>
+        <ul id="highlightsList"></ul>
+      </div>
+
+      <!-- ⭐ TRUST BADGES -->
+      <div class="trust-badges" id="trustBadges"></div>
+    </div>
+
+    <!-- <div class="review-section"> -->
+    <!-- ⭐ RATING -->
+    <!-- <h3>⭐ <span id="avgRating">0</span> / 5</h3> -->
+
+    <!-- 📝 REVIEWS -->
+    <!-- <div id="reviews"></div> -->
+
+    <!-- ➕ ADD REVIEW -->
+    <!-- <div class="add-review">
+        <h3>Add Review</h3>
+        <input type="text" id="rName" placeholder="Your Name" />
+        <select id="rRating">
+          <option value="5">⭐⭐⭐⭐⭐</option>
+          <option value="4">⭐⭐⭐⭐</option>
+          <option value="3">⭐⭐⭐</option>
+          <option value="2">⭐⭐</option>
+          <option value="1">⭐</option>
+        </select>
+        <textarea id="rComment" placeholder="Your review"></textarea>
+        <button id="addReviewBtn">Submit</button>
+      </div>
+    </div> -->
+
+    <script src="js/product.js"></script>
+    <script src="js/script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

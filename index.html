@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TrueLuv</title>
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="popup/popup.css" />
+    <script src="popup/popupData.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo"><a href="#">TrueLuv</a></div>
+      <!-- MOBILE MENU -->
+      <div class="menu">
+        <ion-icon name="close" class="close"></ion-icon>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="jewellery.html">JEWELLERY</a></li>
+          <li><a href="hair.html">HAIR ACCESSORIES</a></li>
+          <li><a href="cosmetics.html">COSMETICS</a></li>
+        </ul>
+      </div>
+      <!-- DESKTOP MENU -->
+      <nav class="heading">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="jewellery.html">JEWELLERY</a></li>
+          <li><a href="hair.html">HAIR ACCESSORIES</a></li>
+          <li><a href="cosmetics.html">COSMETICS</a></li>
+        </ul>
+      </nav>
+      <!-- HAMBURGER ICON -->
+      <div class="heading1"><ion-icon name="menu" class="ham"></ion-icon></div>
+    </header>
+    <!-- ===== SPOTLIGHT SECTION ===== -->
+    <section class="collection-spotlight">
+      <!-- Animated background -->
+      <div class="spotlight-bg">
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+        <span class="bubble"></span>
+      </div>
+
+      <!-- LEFT TEXT -->
+      <div class="spotlight-text">
+        <span class="tag">🔥 TRENDING</span>
+        <h2>Best Sellers</h2>
+        <p>
+          Handpicked jewellery & beauty favorites — premium finish, trendy
+          designs & DM ordering!
+        </p>
+        <ul class="benefits">
+          <li>✔ Premium Finish</li>
+          <li>✔ DM Based Ordering</li>
+          <li>✔ Fast Support</li>
+        </ul>
+        <a href="jewellery.html" class="spotlight-btn">View All Products</a>
+      </div>
+
+      <!-- RIGHT PRODUCTS -->
+      <div class="spotlight-products">
+        <div class="spot-card">
+          <span class="badge">HOT</span>
+          <img src="img/jewelery.pendant.webp" alt="Gold Pendant" />
+          <div class="popup">
+            <h4>Gold Pendant</h4>
+            <p>₹699 <span class="mrp">₹999</span></p>
+            <button
+              class="quick-btn"
+              onclick="
+                dmOrder('Gold Pendant', '699', 'img/jewelery.pendant.webp')
+              "
+            >
+              DM to Order
+            </button>
+          </div>
+        </div>
+
+        <div class="spot-card">
+          <span class="badge">BESTSELLER</span>
+          <img src="img/hair.claw.jpg" alt="Hair Claw Clip" />
+          <div class="popup">
+            <h4>Hair Claw Clip</h4>
+            <p>₹199 <span class="mrp">₹299</span></p>
+            <button
+              class="quick-btn"
+              onclick="dmOrder('Hair Claw Clip', '199', 'img/hair.claw.jpg')"
+            >
+              DM to Order
+            </button>
+          </div>
+        </div>
+
+        <div class="spot-card">
+          <span class="badge">NEW</span>
+          <img src="img/lispstick2.jpg" alt="Matte Lipstick" />
+          <div class="popup">
+            <h4>Matte Lipstick</h4>
+            <p>₹299 <span class="mrp">₹399</span></p>
+            <button
+              class="quick-btn"
+              onclick="dmOrder('Matte Lipstick', '299', 'img/lispstick2.jpg')"
+            >
+              DM to Order
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CATEGORY PRODUCTS ===== -->
+    <section class="products" id="homeCategories">
+      <div class="product-card">
+        <a href="jewellery.html">
+          <img src="img/jewelery.pendant.webp" alt="Jewellery" />
+        </a>
+        <h3>Jewellery</h3>
+        <p class="desc">Elegant | Premium Finish</p>
+        <p class="price">Starting ₹499</p>
+        <a href="jewellery.html" class="btn secondary-btn">View Collection</a>
+      </div>
+
+      <div class="product-card">
+        <a href="hair.html">
+          <img src="img/hair.claw.jpg" alt="Hair Accessories" />
+        </a>
+        <h3>Hair Accessories</h3>
+        <p class="desc">Trendy | Cute Styles</p>
+        <p class="price">Starting ₹199</p>
+        <a href="hair.html" class="btn secondary-btn">View Collection</a>
+      </div>
+
+      <div class="product-card">
+        <a href="cosmetics.html">
+          <img src="img/lispstick2.jpg" alt="Cosmetics" />
+        </a>
+        <h3>Cosmetics</h3>
+        <p class="desc">Glow | Skin Friendly</p>
+        <p class="price">Starting ₹299</p>
+        <a href="cosmetics.html" class="btn secondary-btn">View Collection</a>
+      </div>
+    </section>
+
+    <!-- ===== WHATSAPP + INSTAGRAM ===== -->
+    <a href="https://wa.me/918928080078" class="whatsapp-float" target="_blank">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+      />
+    </a>
+    <a
+      href="https://www.instagram.com/trueluv_accessories?igsh=MWppdnJqMzkycXozdQ=="
+      class="instagram-float"
+      target="_blank"
+    >
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+      />
+    </a>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <div class="footer0"><h1>TrueLuv</h1></div>
+      <div class="footer1">
+        Connect with us
+        <div class="social-media">
+          <a
+            href="https://www.instagram.com/trueluv_accessories?igsh=MWppdnJqMzkycXozdQ=="
+            ><ion-icon name="logo-instagram"></ion-icon
+          ></a>
+          <a href="https://youtube.com/@trueluv_accessories"
+            ><ion-icon name="logo-youtube"></ion-icon
+          ></a>
+        </div>
+      </div>
+      <div class="footer2">
+        <div class="product">
+          <div class="footer-heading">Categories</div>
+          <div class="div">Jewellery</div>
+          <div class="div">Hair Accessories</div>
+          <div class="div">Cosmetics</div>
+        </div>
+
+        <div class="services">
+          <div class="footer-heading">Services</div>
+          <div class="div">DM Order</div>
+          <div class="div">Easy Return</div>
+          <div class="div">Fast Support</div>
+        </div>
+      </div>
+
+      <div class="footer3">
+        © 2024
+        <h4>TrueLuv</h4>
+        All Rights Reserved
+      </div>
+    </footer>
+
+    <!-- IONIC ICONS -->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="popup/popup.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
