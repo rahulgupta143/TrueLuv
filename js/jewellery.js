@@ -1,7 +1,9 @@
 window.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("jewelleryProducts");
 
-  fetch("https://trueluv-backend.onrender.com/api/products/category/jewellery")
+  fetch(
+    "https://trueluv-backend-jazc.onrender.com/api/products/category/jewellery",
+  )
     .then((res) => {
       if (!res.ok) throw new Error("Network response was not ok");
       return res.json();
@@ -60,7 +62,7 @@ function loadRelatedProducts(category, currentId) {
   const relatedBox = document.getElementById("relatedProducts");
 
   fetch(
-    `https://trueluv-backend.onrender.com/api/products/category/${category}`,
+    `https://trueluv-backend-jazc.onrender.com/api/products/category/${category}`,
   )
     .then((res) => res.json())
     .then((data) => {

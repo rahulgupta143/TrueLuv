@@ -6,6 +6,13 @@ const loadProducts = () => {
   fetch("https://trueluv-backend.onrender.com/api/products")
     .then((res) => res.json())
     .then((data) => {
+      if (!Array.isArray(data)) {
+        console.error("API Error:", data);
+        productList.innerHTML =
+          "<p style='color:red'>Failed to load products</p>";
+        return;
+      }
+
       productList.innerHTML = "";
 
       data.forEach((p) => {
@@ -13,21 +20,21 @@ const loadProducts = () => {
         card.className = "admin-card";
 
         card.innerHTML = `
-          <div class="admin-images">
-            ${p.images.map((img) => `<img src="${img}" />`).join("")}
-          </div>
+      <div class="admin-images">
+        ${(p.images || []).map((img) => `<img src="${img}" />`).join("")}
+      </div>
 
-          <div class="product-info">
-            <h4>${p.name}</h4>
-            <p>₹${p.price}</p>
-            <p>Category: ${p.category}</p>
-            <p style="color:${p.stock === "In Stock" ? "green" : "red"}">
-              ${p.stock || "In Stock"}
-            </p>
-          </div>
+      <div class="product-info">
+        <h4>${p.name}</h4>
+        <p>₹${p.price}</p>
+        <p>Category: ${p.category}</p>
+        <p style="color:${p.stock === "In Stock" ? "green" : "red"}">
+          ${p.stock || "In Stock"}
+        </p>
+      </div>
 
-          <button class="delete-btn" data-id="${p._id}">Delete</button>
-        `;
+      <button class="delete-btn" data-id="${p._id}">Delete</button>
+    `;
 
         productList.appendChild(card);
       });
@@ -51,7 +58,7 @@ productForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const name = document.getElementById("name").value.trim();
-  const price = document.getElementById("price").value.trim();
+  const price = Number(document.getElementById("price").value);
   const stock = document.getElementById("stock").value;
   const category = document.getElementById("category").value;
   const desc = document.getElementById("desc").value.trim();
@@ -62,8 +69,8 @@ productForm.addEventListener("submit", (e) => {
     .map((img) => img.trim())
     .filter((img) => img !== "");
 
-  if (!name || !price || !category || images.length === 0) {
-    alert("Please fill all required fields");
+  if (!name || isNaN(price) || !category || images.length === 0) {
+    alert("Please fill all required fields with valid price");
     return;
   }
 
@@ -77,7 +84,7 @@ productForm.addEventListener("submit", (e) => {
       desc,
       fullDesc,
       images,
-      stock,
+      stock: stock || "In Stock",
     }),
   })
     .then((res) => res.json())

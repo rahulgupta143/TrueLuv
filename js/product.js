@@ -25,7 +25,7 @@ let currentProduct = null;
 let currentIndex = 0;
 
 /* ================= FETCH PRODUCT ================= */
-fetch(`https://trueluv-backend.onrender.com/api/products/${productId}`)
+fetch(`https://trueluv-backend-jazc.onrender.com/api/products/${productId}`)
   .then((res) => res.json())
   .then((product) => {
     currentProduct = product;
@@ -41,10 +41,13 @@ fetch(`https://trueluv-backend.onrender.com/api/products/${productId}`)
     pStock.style.color = stockText === "In Stock" ? "green" : "red";
 
     /* DESCRIPTION */
-    descEl.innerText = product.desc || "No description available";
-    console.log(product);
-    fullDescEl.innerText = product.fullDesc || product.desc || "";
-    console.log(product.fullDesc);
+    descEl.innerText =
+      product.desc && product.desc.trim()
+        ? product.desc
+        : "No description available";
+
+    fullDescEl.innerText = product.fullDesc || "";
+
     /* MAIN IMAGE */
     mainImg.src = product.images?.[0] || "";
 
@@ -78,7 +81,7 @@ fetch(`https://trueluv-backend.onrender.com/api/products/${productId}`)
 /* ================= RELATED PRODUCTS ================= */
 function loadRelatedProducts(category, currentId) {
   fetch(
-    `https://trueluv-backend.onrender.com/api/products/related/${category}/${currentId}`,
+    `hhttps://trueluv-backend-jazc.onrender.com/api/products/related/${category}/${currentId}`,
   )
     .then((res) => res.json())
     .then((related) => {

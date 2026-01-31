@@ -1,40 +1,32 @@
 // 🔹 FETCH PRODUCT LIST
 window.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("cosmeticsProducts");
+  if (!container) return;
 
-  fetch("https://trueluv-backend.onrender.com/api/products/category/cosmetic")
-    .then((res) => {
-      if (!res.ok) throw new Error("Network response was not ok");
-      return res.json();
-    })
+  fetch(
+    "https://trueluv-backend-jazc.onrender.com/api/products/category/cosmetics",
+  )
+    .then((res) => res.json())
     .then((data) => {
       container.innerHTML = "";
 
-      if (!data.length) {
-        container.innerHTML = "<p>No products found in this category.</p>";
-        return;
-      }
-
       data.forEach((p) => {
         container.innerHTML += `
-         <div class="product-card" onclick="openProduct('${p._id}')">
-            <img src="${p.images[0]}" />
+          <div class="product-card" onclick="openProduct('${p._id}')">
+            <img src="${p.images?.[0] || ""}" />
             <h3>${p.name}</h3>
-                  <p>${p.desc || p.shortDesc}</p>
+          <p>${p.desc || "No description available"}</p>
+
             <p class="price">₹${p.price}</p>
-            <button onclick="dmOrder('${p.name}','${p.price}','${p.images[0]}')">
-              DM to Order
-            </button>
           </div>
         `;
       });
-    })
-    .catch((err) => {
-      console.error("Fetch Error:", err);
-      container.innerHTML =
-        "<p>Failed to load products. Please try again later.</p>";
     });
 });
+
+function openProduct(id) {
+  window.location.href = `product.html?id=${id}`;
+}
 
 // 🔹 OPEN PRODUCT
 function openProduct(id) {
@@ -59,7 +51,9 @@ Image: ${window.location.origin}/${img}`;
 function loadRelatedProducts(category, currentId) {
   const relatedBox = document.getElementById("relatedProducts");
 
-  fetch(`https://trueluv-backend.onrender.com/api/products/category/${category}`)
+  fetch(
+    `https://trueluv-backend-jazc.onrender.com/api/products/category/${category}`,
+  )
     .then((res) => res.json())
     .then((data) => {
       // Remove the current product from the list

@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("hairProducts");
 
-  fetch("https://trueluv-backend.onrender.com/api/products/category/hair")
+  fetch("https://trueluv-backend-jazc.onrender.com/api/products/category/hair")
     .then((res) => {
       if (!res.ok) throw new Error("Network response was not ok");
       return res.json();
@@ -19,7 +19,8 @@ window.addEventListener("DOMContentLoaded", () => {
          <div class="product-card" onclick="openProduct('${p._id}')">
             <img src="${p.images[0]}" />
             <h3>${p.name}</h3>
-                   <p>${p.desc || p.shortDesc}</p>
+                   <p>${p.desc || "No description available"}</p>
+
             <p class="price">₹${p.price}</p>
             <button onclick="dmOrder('${p.name}','${p.price}','${p.images[0]}')">
               DM to Order
@@ -59,7 +60,7 @@ function loadRelatedProducts(category, currentId) {
   const relatedBox = document.getElementById("relatedProducts");
 
   fetch(
-    `https://trueluv-backend.onrender.com/api/products/category/${category}`,
+    `https://trueluv-backend-jazc.onrender.com/api/products/category/${category}`,
   )
     .then((res) => res.json())
     .then((data) => {
