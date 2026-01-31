@@ -74,7 +74,7 @@ productForm.addEventListener("submit", (e) => {
     return;
   }
 
-  fetch("https://trueluv-backend.onrender.com/api/products", {
+  fetch("https://trueluv-backend-jazc.onrender.com/api/products", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
