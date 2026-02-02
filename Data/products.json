@@ -1,0 +1,188 @@
+[
+  {
+    "id": "p1",
+    "name": "Pink Blossom Pendant",
+    "price": 120,
+    "category": "pendant",
+    "desc": "Elegant | Premium Finish",
+    "fullDesc": "The Pink Blossom necklace is crafted from premium stainless steel, ensuring durability and a polished shine that lasts. Featuring a delicate pink enamel flower pendant, this elegant piece combines modern minimalism with a touch of feminine charm. Perfect for casual or formal wear, it adds a subtle, stylish accent to any outfit. Lightweight and comfortable, it’s a must-have accessory for everyday elegance",
+    "images": ["img/jewelery.pendant.1.png", "img/jewelery.pendant1.png"]
+  },
+
+  {
+    "id": "e1",
+    "name": "Butterfly charm Earring",
+    "price": 40,
+    "category": "earring",
+    "desc": "Colorful stud Earring",
+    "fullDesc": "Add a vibrant touch to your look with Butterfly Charm earrings by Trueluv. These stunning stud earrings feature a beautifully detailed butterfly design in a mix of purple, yellow, and pink enamel, paired with a sparkling crystal accent for an elegant finish. Made from high-quality, lightweight alloy, these earrings are comfortable for daily wear and durable for long-lasting use. Perfect for casual outings, parties, or gifting, the Butterfly Charm earrings combine playful style with sophisticated craftsmanship.",
+    "images": ["img/earings4.png", "img/earing2.png"]
+  },
+  {
+    "id": "e2",
+    "name": "Butterfly Charm",
+    "price": 40,
+    "category": "earring",
+    "desc": "Colorful Earrings",
+    "fullDesc": "Elegant Butterfly Charm earrings crafted with high-quality enamel and gold-plated metal. Available in 6 vibrant colors—Blue, Red, Pink, Yellow, Green, and White—these lightweight earrings feature a delicate butterfly design with a sparkling cubic zirconia stud, perfect for adding a playful yet chic touch to any outfit. Ideal for daily wear or special occasions, these earrings combine style, comfort, and versatility.",
+    "images": ["img/earing3.png"]
+  },
+
+  {
+    "id": "e3",
+    "name": "Color Drop",
+    "price": 30,
+    "category": "earring",
+    "desc": "Vibrant Hoop Earrings",
+    "fullDesc": "Add a pop of color to your look with the Color Drop earrings. Crafted from high-quality silver-plated metal, these lightweight hoop earrings feature a smooth, glossy resin charm available in five vibrant shades: Yellow, Purple, Black, Pink, and Light Blue. Perfect for daily wear or special occasions, they bring a fun, stylish, and versatile touch to any outfit. Durable, comfortable, and eye-catching, the Color Drop earrings are a must-have accessory for fashion enthusiasts.",
+    "images": ["img/Earring1.png"]
+  },
+
+  {
+    "id": "e4",
+    "name": "Floral Jhumka",
+    "price": 50,
+    "category": "earring",
+    "desc": "Vibrant Enamel Jhumkas",
+    "fullDesc": "Product Overview:\nAdd a splash of color to your ethnic wardrobe with these stunning multicolor Jhumka earrings. Combining traditional Indian craftsmanship with a playful, modern palette, these earrings are designed to make a statement at weddings, festivals, or special celebrations.\n\nKey Features:\n\nStyle:\nTraditional Jhumka silhouette featuring a delicate floral stud and a classic bell-shaped drop.\n\nMaterial:\nCrafted from a high-quality silver-toned alloy base decorated with vibrant enamel work and shimmering crystals.\n\nDetailing:\nFeatures intricate cut-out patterns on the bell, accented with colorful teardrop stones and matching hanging beads for a rhythmic sway.\n\nOccasion:\nPerfect for pairing with sarees, lehengas, or anarkalis to add a festive and youthful touch to your look.",
+    "images": ["img/jhumka.1.png"]
+  },
+
+  {
+    "id": "c1",
+    "name": "Magic Gloss",
+    "price": 60,
+    "category": "c1",
+    "desc": "Shimmering Pink Pout",
+    "fullDesc": "Product Overview:\nGet ready to glow with our Magic Lip Gloss, a must-have for anyone who loves a high-shine, ethereal look. Encased in a unique, avant-garde triangular bottle, this gloss isn't just a beauty product—it's a vanity statement.\n\nKey Features:\n\nStyle:\nModern and playful \"Magic Your Life\" theme with a stunning shimmering pink finish.\n\nPackaging:\nFeatures a distinctive triangular glass-like bottle with a matching soft pink square cap, designed for the trend-conscious user.\n\nEffect:\nInfused with fine holographic micro-shimmer that catches the light from every angle, creating a fuller, multidimensional lip look.\n\nOccasion:\nPerfect for daily wear to add a touch of sparkle or as a top-coat over your favorite lipstick for a party-ready transformation.",
+    "images": ["img/lipbalm.jpeg"],
+    "stock": "In Stock"
+  },
+  {
+    "id": "c2",
+    "name": "Maroon Liquid Sindoor",
+    "price": 20,
+    "category": "c1",
+    "desc": "Traditional Deep Crimson Shade",
+    "fullDesc": "Product Overview:\nEmbrace tradition with this convenient Liquid Kumkum Stick. Designed for the modern woman who values heritage, this deep maroon bindi liquid provides a smooth, precise application for daily rituals, festivals, or weddings.\n\nKey Features:\n\nStyle:\nClassic Maroon (Sindoor/Kumkum) shade that offers a rich, matte finish suitable for all skin tones.\n\nPackaging:\nComes in a sleek, travel-friendly pen-style applicator with a white cap, ensuring no-mess handling and easy storage in your makeup kit.\n\nFormula:\nThe \"Roop Lady\" brand liquid is formulated for long-lasting wear, resisting smudges throughout the day.\n\nApplication:\nFeatures a pointed tip for creating perfect, traditional round bindis or precise decorative lines with ease.",
+    "images": ["img/MaroonLiquidSindoor.jpeg"],
+    "stock": "In Stock"
+  },
+
+  {
+    "id": "c3",
+    "name": "Cemera Ice-Matte Eyeliner",
+    "price": 80,
+    "category": "c1",
+    "desc": "Ultra-Black, Waterproof 24H Long-Stay Eyeliner.",
+    "fullDesc": "Enhance your eyes with the Cemera Super Ice-Matte Eyeliner. Designed for a professional finish, this liner delivers an intense black pigment that stays perfect for 24 hours. Its lightweight, smudge-proof formula ensures a comfortable, all-day wear without fading. Whether it’s rain or sweat, the 100% waterproof technology keeps your look sharp and bold.\n\nFinish: Ultra-Matte & Bold Black.\n\nSpecialty: Smudge-proof & Transfer-proof.\n\nBest For: Daily wear, parties, and professional makeup.",
+    "images": [
+      "img/EyeLinerProduct.png",
+      "img/eyelinerWithModel.png",
+      "img/eyelinerDetails.png"
+    ],
+    "stock": "In Stock"
+  },
+
+  {
+    "id": "c4",
+    "name": "Denley Luxe Lacquer",
+    "price": 120,
+    "category": "c1",
+    "desc": "Flawless finish with a high-shine glow.",
+    "fullDesc": "Indulge in the ultimate nail makeover with Denley’s Premium Nail Enamel collection. Designed for the modern woman, our formula delivers an ultra-pigmented, salon-quality finish right at home. 💅 From the calming vibes of ocean blue to the timeless elegance of earthy nudes, these shades are crafted to complement every skin tone and outfit.\n\nOur chip-resistant and long-wear formula ensures your manicure stays fresh, vibrant, and incredibly glossy for days.\n\nWhether you're heading to a brunch or a late-night party, let your hands do the talking with a touch of luxury and a whole lot of sparkle! ✨💖🌟",
+    "images": [
+      "img/nailpolishAll Product.png",
+      "img/orangenailpolish.jpeg",
+      "img/bluenailpolish.jpeg",
+      "img/creamnailpolish.jpeg",
+      "img/litecream.nailpolish.jpeg"
+    ],
+    "stock": "In Stock"
+  },
+
+  {
+    "id": "h1",
+    "name": "Shimmer Bow Headband",
+    "price": 40,
+    "category": "hair",
+    "desc": "Glitter Pearl Bow Hair Clip",
+    "fullDesc": "Add a touch of fairy-tale magic to your little one's hairstyle with this exquisite Shimmer Bow Hair Clip. Designed for a dreamy look, this oversized bow is crafted from sparkling sheer organza fabric that catches the light beautifully.\n\nKey Features:\nMaterial: High-quality shimmering net/organza fabric with a soft glitter finish.\nDesign: Features elegant, long satin ribbon tails paired with delicate strands of cascading faux pearls for a princess-like effect.\nComfort & Grip: Attached to a sturdy, non-slip metal alligator clip that holds fine hair securely without pulling.\nStyle: Perfect for parties, weddings, birthdays, and festive occasions.\nColors: Available in vibrant Red, soft Blush Pink, and classic Gold.",
+    "images": [
+      "img/Hair Cute Girls Bow Hairband.jpeg",
+      "img/Hair Cute Girls Bow Hairband1.jpeg",
+      "img/Hair Cute Girls Bow Hairband2.jpeg"
+    ]
+  },
+
+  {
+    "id": "h2",
+    "name": "Crystal Headband",
+    "price": 60,
+    "category": "hair",
+    "desc": "blue Satin Headband with Crystals",
+    "fullDesc": "This stylish Navy Blue Headband is specially designed for special occasions, adding an elegant and luxurious touch to any outfit.\n\nMaterial:\nCrafted with a premium satin ribbon base, the headband features a shiny holographic fabric bow that reflects light beautifully and changes colors for a dazzling effect.\n\nDesign:\nThe bow is adorned with a large diamond/crystal stone at the center, complemented by delicate hanging pearl strands underneath, giving it a rich and graceful appearance.\n\nStyle & Comfort:\nDesigned as a comfortable hairband (not a clip), it fits securely on a child’s head and holds hair gently without causing discomfort.\n\nOccasion:\nPerfect for parties, weddings, and birthday celebrations. It pairs beautifully with blue or white dresses for a charming and elegant look.",
+    "images": [
+      "img/hair.CuteBluehairBand1.png",
+      "img/hair.CuteBluehairBand.png"
+    ]
+  },
+
+  {
+    "id": "h3",
+    "name": "Korean Matte Hair Clutch",
+    "price": 60,
+    "category": "hair",
+    "desc": "Get 3 stylish matte hair clutches",
+    "fullDesc": "Elevate your everyday look with this set of trendy Korean-style hair accessories that blend minimalism with unique shapes.\n\nMaterial:\nMade from a premium matte-finish durable plastic that provides a smooth, non-slip grip without tugging on hair.\n\nStyle & Design:\nThe collection features aesthetic geometric shapes, including a hollow heart design, a wavy squiggle pattern, and a classic butterfly claw with heart accents.\n\nColor Palette:\nComes in a sophisticated neutral palette featuring matte black, cool beige, and soft cream tones to match any outfit.\n\nFunctionality:\nEquipped with a strong metal spring for a secure hold, making them perfect for half-up hairstyles or securing buns for both thin and thick hair.\n\nOccasion:\nIdeal for casual daily wear, office settings, or as a chic addition to a brunch outfit",
+    "images": ["img/hair.3OfferKoreanClutch.jpeg"]
+  },
+
+  {
+    "id": "h4",
+    "name": "Floral Hair-Clip Set",
+    "price": 30,
+    "category": "hair",
+    "desc": "Get 3 Colorful Mini Clips",
+    "fullDesc": "Brighten up any hairstyle with this vibrant set of Korean-inspired mini hair clips, designed to be both functional and fun.\n\nMaterial:\nCrafted from high-quality metallic-finish plastic with a glossy coating that gives each clip a premium, shiny look.\n\nStyle & Design:\nThe set features two adorable themes—sparkling strawberries with textured details and vibrant flowers with a shimmering crystal-like center.\n\nColor Palette:\nIncludes a diverse range of multicolored shades, such as emerald green, royal blue, ruby red, metallic gold, and bright purple, allowing for endless mixing and matching.\n\nFunctionality:\nDesigned as small jaw-style clips with a sturdy spring mechanism, perfect for holding back small sections of hair or decorating braids and pigtails.\n\nOccasion:\nIdeal for school, parties, festive events, or simply adding a pop of color to a casual day out.",
+    "images": ["img/hairStrawberry, Flower & Bunny.jpeg"]
+  },
+
+  {
+    "id": "h5",
+    "name": "Heart Shape Korean Clutch",
+    "price": 39,
+    "category": "hair",
+    "desc": "Get 2 stylish matte hair clutches",
+    "fullDesc": "Elevate your daily look with these Korean-style heart-shaped hair claw clips. Designed for both functionality and aesthetic appeal, these clips offer a modern twist on a classic accessory, perfect for achieving that effortless \"clean girl\" or \"soft girl\" aesthetic.\n\nKey Features:\n\nStyle:\nMinimalist Korean design featuring an open-heart silhouette with a smooth matte finish.\n\nMaterial:\nMade from high-quality, durable acrylic/polycarbonate with a sturdy metal spring for a secure, non-slip grip.\n\nVersatility:\nThe set includes timeless Black and Cream/Off-White shades, making them easy to pair with any outfit, from casual loungewear to elegant dresses.\n\nHair Type:\nSuitable for various hair thicknesses; ideal for half-up styles or securing buns.",
+    "images": ["img/hair.heartShpeKoreanClutch.jpeg"]
+  },
+
+  {
+    "id": "h6",
+    "name": "Luxe Satin Scrunchies",
+    "price": 60,
+    "category": "hair",
+    "desc": "Get 6 premium scrunchies for ₹60!",
+    "fullDesc": "Say goodbye to hair breakage and hello to effortless style with our Premium Satin Scrunchie Collection! ✨ These ultra-soft accessories are designed to glide over your hair without pulling or snagging, keeping your locks smooth and frizz-free all day long. 🎀\n\nFeaturing a stunning palette of rich jewel tones and classic neutrals—including deep navy, elegant champagne, and shimmering gold—these scrunchies add a touch of sophistication to any hairstyle. 🌟\n\nWhether you're rocking a messy bun or a sleek ponytail, our high-quality elastic ensures a secure yet comfortable grip.\n\nTreat your hair to the luxury it deserves! 💖👑🍂",
+    "images": ["img/ScrunchiesIMg.png", "img/scrunchiesSingle.jpeg"]
+  },
+  {
+    "id": "h7",
+    "name": "Kawaii Teddy Clips",
+    "price": 20,
+    "category": "hair",
+    "desc": "Adorable bear clips for little stars.",
+    "fullDesc": "Add a touch of magic to her day with these Premium Teddy Bear Hair Clips! 🧸✨ This charming set of pink and purple clips is perfect for keeping hair in place while looking absolutely precious. 🌸\n\nDesigned with a secure yet comfortable grip, they are the ideal accessory for school, parties, or everyday fun. 🎀\n\nMake every hairstyle special with these lovable little companions! 💖🍭🌈",
+    "images": ["img/hair.teddyClip.png"]
+  },
+  {
+    "id": "ring1",
+    "name": "Lavender Sparkle ",
+    "desc": "Elegant Violet Gem",
+    "fullDesc": "Product Overview:\nAdd a touch of timeless sophistication to your hand with this exquisite lavender-hued gemstone ring. Designed for elegance and precision, this piece captures the essence of refined beauty, making it an ideal choice for engagements, anniversaries, or a luxury gift for yourself.\n\nKey Features:\nStyle: A classic three-stone setting featuring a prominent round-cut center stone flanked by delicate side accents.\nMaterial: Crafted from high-quality polished sterling silver or white gold, ensuring a brilliant shine that complements the cool tones of the gemstone.\nDetailing: The center features a vibrant lavender-violet stone (resembling Tanzanite or Amethyst), securely held by a four-prong setting and highlighted by shimmering clear accent crystals for added brilliance.\nOccasion: Its dainty and slender band makes it perfect for stacking with other rings or wearing alone as a subtle statement piece for formal events or everyday luxury.",
+    "price": 70,
+    "category": "ring",
+    "images": ["img/blue.RING.png", "img/blueRING.png"]
+  }
+]
