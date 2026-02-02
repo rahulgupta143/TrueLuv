@@ -49,6 +49,19 @@
   },
 
   {
+    "id": "e5",
+    "name": "Trueluv Sparkle Trio",
+    "price": 100,
+    "category": "earring",
+    "desc": "Timeless elegance for every occasion.",
+    "fullDesc": "Shine bright with the Trueluv Sparkle Trio, a stunning collection of premium stud and drop earrings! 💎✨\nFeaturing elegant designs like rose-gold hearts, opal-style squares, and shimmering crystals.\nLightweight, stylish, and crafted to add instant glamour to any outfit.\nPerfect for casual brunches, parties, and elegant evening looks. 💖✨",
+    "images": [
+      "img/4EarringImg.png",
+      "img/4EarringModelImg.png",
+      "img/4EarringDetailImg.png"
+    ]
+  },
+  {
     "id": "c1",
     "name": "Magic Gloss",
     "price": 60,
@@ -101,6 +114,76 @@
     "stock": "In Stock"
   },
 
+  {
+    "id": "c5",
+    "name": "Velvet Matte Gloss",
+    "price": 60,
+    "category": "c1",
+    "desc": "24hr stay, heart-lock design.",
+    "fullDesc": "Unlock your perfect pout with the HudaColor 24hr Matte Lip Gloss Set! ✨\nHeart-lock design with a smooth, lightweight velvet matte finish.\nHighly pigmented shades from soft pinks to bold berry tones.\nLong-lasting, non-drying formula for all-day flawless lips. 💄💖",
+    "images": [
+      "img/LookLipstickImg.png",
+      "img/LookLipstickImgWithModel.png",
+      "img/LookLipstickDetailImg.png"
+    ],
+    "stock": "In Stock"
+  },
+
+  {
+    "id": "c6",
+    "name": "Magic Glow Balm",
+    "price": 60,
+    "category": "c1",
+    "desc": "Hydrated lips with natural tint.",
+    "fullDesc": "Keep your smile soft and radiant with our Magic Lip Care Duo! ✨\nIncludes Pink Magic color-changing balm and Hot Lips hydrating stick.\nDeeply moisturizes while adding a natural, healthy glow.\nPerfect for daily lip care and protection from dryness. 💖💄",
+    "images": ["img/2LipBlamIng.png", "img/2LipBlamDetailPage.png"],
+    "stock": "In Stock"
+  },
+
+  {
+    "id": "c7",
+    "name": "Trueluv Hot Lips",
+    "price": 30,
+    "category": "c1",
+    "desc": "Hydrating Colorful Care for Soft Lips ✨",
+    "fullDesc": "Experience the perfect blend of style and lip care with the Trueluv Hot Lips Collection. 🌈\nEach balm is expertly formulated to provide long-lasting moisture while adding a subtle, healthy glow to your smile.\nWhether you're looking for a pop of color or deep hydration, these pocket-sized essentials are designed for the modern lifestyle.\nKeep your lips smooth, supple, and \"hot\" all day long! 💋✨\n\nKey Features:\n\n🌿 Intense Hydration: Locks in moisture for hours.\n🎨 Vibrant Variety: Available in six stunning shades.\n👜 Travel Friendly: Sleek design for on-the-go touch-ups.\n✨ Smooth Finish: Non-sticky formula for ultimate comfort.",
+    "images": [
+      "img/HottLipBlamDetailProduct.png",
+      "img/HottLipBlamMultipalPRoduct.png",
+      "img/HottLipBlamSinglePRoduct.png"
+    ],
+    "stock": "In Stock"
+  },
+
+  {
+    "id": "c8",
+    "name": "Beautyline Instant Remover",
+    "price": 60,
+    "category": "c1",
+    "desc": "Get 3 scented nail polish removers. 🌸🍍",
+    "fullDesc": "Upgrade your manicure routine with the Beautyline Nail Polish Remover Wipes Trio. 🌟\nThis bundle features three refreshing fragrances: soothing Lavender, tropical Pineapple, and elegant Rose.\nEach compact container includes 30 pre-moistened, acetone-free wipes that gently remove nail polish while nourishing cuticles.\nOne powerful wipe is enough to clean all ten nails, making it perfect for quick touch-ups at home or on the go. ✨🥥\n\nKey Features:\n\n🌸 Aromatic Variety: Includes Lavender, Pineapple, and Rose scents.\n💧 Acetone-Free: Gentle on nails and skin to prevent drying.\n⚡ One-Wipe Wonder: Cleans up to 10 nails with a single wipe.\n👜 Travel-Ready: Spill-proof containers fit easily in any bag.\n💅 30 Wipes Per Pack: Long-lasting value for multiple manicures.",
+    "images": [
+      "img/3NailPolishRemoverImg.png",
+      "img/3NailPolishRemoverImg2.png",
+      "img/3NailPolishRemoverDetailImg.png"
+    ],
+    "stock": "In Stock"
+  },
+
+  {
+    "id": "c9",
+    "name": "Trueluv Teddy Matte",
+    "price": 60,
+    "category": "c1",
+    "desc": "Cute keychain with velvet matte lipstick. 💄",
+    "fullDesc": "Unveil the cutest secret in your makeup bag with the Trueluv Teddy Keychain Matte Lipstick. 🧸\nThis unique 2-in-1 beauty accessory features an adorable teddy bear design that doubles as a stylish keychain for your bags or keys.\nInside, you’ll find a high-pigment, velvety matte lipstick that glides on smoothly for a lightweight, long-lasting finish.\nPerfect for quick touch-ups on the go, it blends convenience with chic style. Stay bold and beautiful wherever you are! 💋✨\n\nKey Features:\n\n🧸 Adorable Design: Stylish teddy bear keychain charm.\n💄 Velvet Matte Finish: Intense color with a comfortable, non-drying feel.\n🕒 Long-Lasting Wear: Stays put through your busy day.\n👜 Ultimate Portability: Easily clips onto purses, backpacks, or keys.\n🎁 Perfect Gift: A delightful surprise for makeup and accessory lovers.",
+    "images": [
+      "img/TeddyKeychainImg.png",
+      "img/TeddyKeychainModelImg.png",
+      "img/TeddyKeychainDetailImg.png"
+    ],
+    "stock": "In Stock"
+  },
   {
     "id": "h1",
     "name": "Shimmer Bow Headband",
