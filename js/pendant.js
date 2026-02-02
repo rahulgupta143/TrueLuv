@@ -1,25 +1,36 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const container = document.getElementById("hairProducts");
+window.addEventListener("DOMContentLoaded", () => {
+  const container = document.getElementById("pendantProducts");
   if (!container) return;
 
+  // 🔹 Load products.json
   fetch("data/products.json")
     .then((res) => res.json())
     .then((products) => {
-      const hairItems = products.filter((p) => p.category === "hair");
+      // 🔹 Only pendants
+      const pendants = products.filter((p) => p.category === "pendant");
+
       container.innerHTML = "";
 
-      if (!hairItems.length) {
-        container.innerHTML = "<p>No hair products found.</p>";
+      if (!pendants.length) {
+        container.innerHTML = "<p>No products found.</p>";
         return;
       }
 
-      hairItems.forEach((p) => {
-        // 🔹 image OR images OR fallback
-        const imgSrc = p.image || p.images?.[0] || "img/hair-default.png";
+      pendants.forEach((p) => {
+        // 🔹 image OR images handle
+        const imgSrc = p.image
+          ? p.image
+          : p.images && p.images.length
+            ? p.images[0]
+            : "img/default.png";
 
         container.innerHTML += `
           <div class="product-card" onclick="openProduct('${p.id}')">
-            <img src="${imgSrc}" onerror="this.src='img/hair-default.png'" />
+            <img 
+              src="${imgSrc}" 
+              alt="${p.name}"
+              onerror="this.src='img/default.png'"
+            />
             <h3>${p.name}</h3>
             <p>${p.desc || "No description available"}</p>
             <p class="price">₹${p.price}</p>
@@ -31,8 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     })
     .catch((err) => {
-      console.error(err);
-      container.innerHTML = "<p>Error loading products</p>";
+      console.error("Products load error:", err);
+      container.innerHTML = "<p>Unable to load products.</p>";
     });
 });
 
@@ -41,24 +52,17 @@ function openProduct(id) {
   window.location.href = `product.html?id=${id}`;
 }
 
-// 🔹 DM to Order
-function dmOrder(name, price, img) {
-  const message = `Hi, I want to order this product 👇
-
-Product: ${name}
-Price: ₹${price}
-Image: ${window.location.origin}/${img}`;
-
-  const whatsappUrl =
-    "https://wa.me/918928080078?text=" + encodeURIComponent(message);
-
-  window.open(whatsappUrl, "_blank");
+// 🔹 OPEN PRODUCT DETAIL PAGE
+function openProduct(id) {
+  window.location.href = `product.html?id=${id}`;
 }
 
-// 🔹 RELATED PRODUCTS (EARRINGS)
+// 🔹 RELATED PRODUCTS (for product.html)
 function loadRelatedProducts(category, currentId) {
   const relatedBox = document.getElementById("relatedProducts");
-  const allProducts = JSON.parse(localStorage.getItem("products") || "[]");
+  if (!relatedBox) return;
+
+  const allProducts = JSON.parse(localStorage.getItem("products")) || [];
 
   const related = allProducts.filter(
     (p) => p.category === category && p.id !== currentId,
@@ -72,9 +76,16 @@ function loadRelatedProducts(category, currentId) {
   }
 
   related.forEach((p) => {
+    const imgSrc =
+      p.images && p.images.length ? p.images[0] : "img/default.png";
+
     relatedBox.innerHTML += `
       <div class="product-card" onclick="openProduct('${p.id}')">
-        <img src="${p.images[0]}" alt="${p.name}" />
+        <img 
+          src="${imgSrc}" 
+          alt="${p.name}" 
+          onerror="this.src='img/default.png'"
+        />
         <h3>${p.name}</h3>
         <p class="price">₹${p.price}</p>
       </div>

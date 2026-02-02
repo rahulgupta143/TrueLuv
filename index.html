@@ -14,33 +14,49 @@
     <script src="popup/popupData.js"></script>
   </head>
   <body>
+    <!-- ===== HEADER ===== -->
     <header>
       <div class="logo"><a href="#">TrueLuv</a></div>
+
       <!-- MOBILE MENU -->
       <div class="menu">
         <ion-icon name="close" class="close"></ion-icon>
         <ul>
           <li><a href="index.html">HOME</a></li>
-          <li><a href="jewellery.html">JEWELLERY</a></li>
+          <li class="submenu">
+            <ul>
+              <li><a href="pendant.html">Pendant</a></li>
+              <li><a href="earring.html">Earring</a></li>
+              <li><a href="ring.html">Ring</a></li>
+            </ul>
+          </li>
           <li><a href="hair.html">HAIR ACCESSORIES</a></li>
           <li><a href="cosmetics.html">COSMETICS</a></li>
         </ul>
       </div>
+
       <!-- DESKTOP MENU -->
       <nav class="heading">
         <ul>
           <li><a href="index.html">HOME</a></li>
-          <li><a href="jewellery.html">JEWELLERY</a></li>
+          <li class="submenu">
+            <ul>
+              <li><a href="pendant.html">Pendant</a></li>
+              <li><a href="earring.html">Earring</a></li>
+              <li><a href="ring.html">Ring</a></li>
+            </ul>
+          </li>
           <li><a href="hair.html">HAIR ACCESSORIES</a></li>
           <li><a href="cosmetics.html">COSMETICS</a></li>
         </ul>
       </nav>
+
       <!-- HAMBURGER ICON -->
       <div class="heading1"><ion-icon name="menu" class="ham"></ion-icon></div>
     </header>
+
     <!-- ===== SPOTLIGHT SECTION ===== -->
     <section class="collection-spotlight">
-      <!-- Animated background -->
       <div class="spotlight-bg">
         <span class="bubble"></span>
         <span class="bubble"></span>
@@ -63,21 +79,21 @@
           <li>✔ DM Based Ordering</li>
           <li>✔ Fast Support</li>
         </ul>
-        <a href="jewellery.html" class="spotlight-btn">View All Products</a>
+        <a href="index.html" class="spotlight-btn">View All Products</a>
       </div>
 
       <!-- RIGHT PRODUCTS -->
       <div class="spotlight-products">
         <div class="spot-card">
           <span class="badge">HOT</span>
-          <img src="img/jewelery.pendant.webp" alt="Gold Pendant" />
+          <img src="img/jewelery.pendant.1.png" alt="Gold Pendant" />
           <div class="popup">
             <h4>Gold Pendant</h4>
-            <p>₹699 <span class="mrp">₹999</span></p>
+            <p>₹120 <span class="mrp">₹200</span></p>
             <button
               class="quick-btn"
               onclick="
-                dmOrder('Gold Pendant', '699', 'img/jewelery.pendant.webp')
+                dmOrder('Gold Pendant', '120', 'img/jewelery.pendant.webp')
               "
             >
               DM to Order
@@ -87,13 +103,13 @@
 
         <div class="spot-card">
           <span class="badge">BESTSELLER</span>
-          <img src="img/hair.claw.jpg" alt="Hair Claw Clip" />
+          <img src="img/earings4.png" alt="Gold Earring" />
           <div class="popup">
-            <h4>Hair Claw Clip</h4>
-            <p>₹199 <span class="mrp">₹299</span></p>
+            <h4>Gold Earring</h4>
+            <p>₹40 <span class="mrp">₹60</span></p>
             <button
               class="quick-btn"
-              onclick="dmOrder('Hair Claw Clip', '199', 'img/hair.claw.jpg')"
+              onclick="dmOrder('Gold Earring', '40', 'img/earings4.png')"
             >
               DM to Order
             </button>
@@ -102,13 +118,13 @@
 
         <div class="spot-card">
           <span class="badge">NEW</span>
-          <img src="img/lispstick2.jpg" alt="Matte Lipstick" />
+          <img src="img/blueRING.png" alt="Best Ring" />
           <div class="popup">
-            <h4>Matte Lipstick</h4>
-            <p>₹299 <span class="mrp">₹399</span></p>
+            <h4>Gold Ring</h4>
+            <p>₹60 <span class="mrp">₹99</span></p>
             <button
               class="quick-btn"
-              onclick="dmOrder('Matte Lipstick', '299', 'img/lispstick2.jpg')"
+              onclick="dmOrder('Gold Ring', '60', 'img/blueRING.png')"
             >
               DM to Order
             </button>
@@ -119,19 +135,43 @@
 
     <!-- ===== CATEGORY PRODUCTS ===== -->
     <section class="products" id="homeCategories">
+      <!-- Pendant -->
       <div class="product-card">
-        <a href="jewellery.html">
-          <img src="img/jewelery.pendant.webp" alt="Jewellery" />
+        <a href="pendant.html">
+          <img src="img/jewelery.pendant.1.png" alt="Pendant" />
         </a>
-        <h3>Jewellery</h3>
+        <h3>Pendant</h3>
         <p class="desc">Elegant | Premium Finish</p>
         <p class="price">Starting ₹499</p>
-        <a href="jewellery.html" class="btn secondary-btn">View Collection</a>
+        <a href="pendant.html" class="btn secondary-btn">View Collection</a>
       </div>
 
+      <!-- Earring -->
+      <div class="product-card">
+        <a href="earring.html">
+          <img src="img/earings4.png" alt="Earring" />
+        </a>
+        <h3>Earring</h3>
+        <p class="desc">Stylish | Trendy</p>
+        <p class="price">Starting ₹499</p>
+        <a href="earring.html" class="btn secondary-btn">View Collection</a>
+      </div>
+
+      <!-- Ring -->
+      <div class="product-card">
+        <a href="ring.html">
+          <img src="img/blue.RING.png" alt="Ring" />
+        </a>
+        <h3>Ring</h3>
+        <p class="desc">Classic | Premium Finish</p>
+        <p class="price">Starting ₹399</p>
+        <a href="ring.html" class="btn secondary-btn">View Collection</a>
+      </div>
+
+      <!-- Hair Accessories -->
       <div class="product-card">
         <a href="hair.html">
-          <img src="img/hair.claw.jpg" alt="Hair Accessories" />
+          <img src="img/hair.3OfferKoreanClutch.jpeg" alt="Hair Accessories" />
         </a>
         <h3>Hair Accessories</h3>
         <p class="desc">Trendy | Cute Styles</p>
@@ -139,9 +179,10 @@
         <a href="hair.html" class="btn secondary-btn">View Collection</a>
       </div>
 
+      <!-- Cosmetics -->
       <div class="product-card">
         <a href="cosmetics.html">
-          <img src="img/lispstick2.jpg" alt="Cosmetics" />
+          <img src="img/bluenailpolish.jpeg" alt="Cosmetics" />
         </a>
         <h3>Cosmetics</h3>
         <p class="desc">Glow | Skin Friendly</p>
@@ -157,7 +198,7 @@
       />
     </a>
     <a
-      href="https://www.instagram.com/trueluv_accessories?igsh=MWppdnJqMzkycXozdQ=="
+      href="https://www.instagram.com/trueluv_accessories"
       class="instagram-float"
       target="_blank"
     >
@@ -172,8 +213,7 @@
       <div class="footer1">
         Connect with us
         <div class="social-media">
-          <a
-            href="https://www.instagram.com/trueluv_accessories?igsh=MWppdnJqMzkycXozdQ=="
+          <a href="https://www.instagram.com/trueluv_accessories"
             ><ion-icon name="logo-instagram"></ion-icon
           ></a>
           <a href="https://youtube.com/@trueluv_accessories"
@@ -184,11 +224,12 @@
       <div class="footer2">
         <div class="product">
           <div class="footer-heading">Categories</div>
-          <div class="div">Jewellery</div>
+          <div class="div">Pendant</div>
+          <div class="div">Earring</div>
+          <div class="div">Ring</div>
           <div class="div">Hair Accessories</div>
           <div class="div">Cosmetics</div>
         </div>
-
         <div class="services">
           <div class="footer-heading">Services</div>
           <div class="div">DM Order</div>
@@ -196,7 +237,6 @@
           <div class="div">Fast Support</div>
         </div>
       </div>
-
       <div class="footer3">
         © 2024
         <h4>TrueLuv</h4>
@@ -213,6 +253,7 @@
       nomodule
       src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+
     <script src="popup/popup.js"></script>
     <script src="js/script.js"></script>
   </body>

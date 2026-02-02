@@ -20,44 +20,49 @@ const modalSlider = document.getElementById("modalSlider");
 const prevBtn = document.querySelector(".slider-btn.prev");
 const nextBtn = document.querySelector(".slider-btn.next");
 const seeMoreBtn = document.getElementById("seeMore");
-/* ================= STATE ================= */
+
 let currentProduct = null;
 let currentIndex = 0;
 
-/* ================= FETCH PRODUCT ================= */
-fetch(`https://trueluv-backend-jazc.onrender.com/api/products/${productId}`)
+/* ================= LOAD PRODUCT ================= */
+fetch("data/products.json")
   .then((res) => res.json())
-  .then((product) => {
+  .then((products) => {
+    const product = products.find((p) => p.id === productId);
+
+    if (!product) {
+      skeleton.innerHTML = "<p style='color:red'>Product not found</p>";
+      return;
+    }
+
     currentProduct = product;
     skeleton.style.display = "none";
 
     /* BASIC INFO */
     nameEl.innerText = product.name;
     priceEl.innerText = "₹" + product.price;
+    pStock.innerText = product.stock || "In Stock";
+    pStock.style.color = "green";
 
-    /* STOCK (SAFE) */
-    const stockText = product.stock || "In Stock";
-    pStock.innerText = stockText;
-    pStock.style.color = stockText === "In Stock" ? "green" : "red";
-
-    /* DESCRIPTION */
-    descEl.innerText =
-      product.desc && product.desc.trim()
-        ? product.desc
-        : "No description available";
-
+    descEl.innerText = product.desc || "";
     fullDescEl.innerText = product.fullDesc || "";
 
+    /* IMAGE HANDLING (image OR images) */
+    const images = product.images
+      ? product.images
+      : product.image
+        ? [product.image]
+        : ["img/default.png"];
+
     /* MAIN IMAGE */
-    mainImg.src = product.images?.[0] || "";
+    mainImg.src = images[0];
 
     /* THUMBNAILS */
     thumbs.innerHTML = "";
-    product.images.forEach((img, index) => {
+    images.forEach((img, i) => {
       const t = document.createElement("img");
       t.src = img;
-
-      if (index === 0) t.classList.add("selected");
+      if (i === 0) t.classList.add("selected");
 
       t.onclick = () => {
         mainImg.src = img;
@@ -66,48 +71,40 @@ fetch(`https://trueluv-backend-jazc.onrender.com/api/products/${productId}`)
           .forEach((el) => el.classList.remove("selected"));
         t.classList.add("selected");
       };
-
       thumbs.appendChild(t);
     });
 
     /* RELATED PRODUCTS */
-    loadRelatedProducts(product.category, product._id);
-  })
-  .catch((err) => {
-    console.error("Product Fetch Error:", err);
-    skeleton.innerHTML = "<p style='color:red'>Failed to load product.</p>";
+    loadRelatedProducts(products, product.category, product.id);
   });
 
 /* ================= RELATED PRODUCTS ================= */
-function loadRelatedProducts(category, currentId) {
-  fetch(
-    `hhttps://trueluv-backend-jazc.onrender.com/api/products/related/${category}/${currentId}`,
-  )
-    .then((res) => res.json())
-    .then((related) => {
-      relatedBox.innerHTML = "";
+function loadRelatedProducts(allProducts, category, currentId) {
+  const related = allProducts.filter(
+    (p) => p.category === category && p.id !== currentId,
+  );
 
-      if (!related.length) {
-        relatedBox.innerHTML = "<p>No related products found.</p>";
-        return;
-      }
+  relatedBox.innerHTML = "";
 
-      related.forEach((p) => {
-        relatedBox.innerHTML += `
-          <div class="product-card" onclick="openProduct('${p._id}')">
-            <img src="${p.images?.[0] || ""}" />
-            <h3>${p.name}</h3>
-            <p class="price">₹${p.price}</p>
-          </div>
-        `;
-      });
-    })
-    .catch(() => {
-      relatedBox.innerHTML = "<p>Error loading related products</p>";
-    });
+  if (!related.length) {
+    relatedBox.innerHTML = "<p>No related products</p>";
+    return;
+  }
+
+  related.forEach((p) => {
+    const img = p.image || (p.images && p.images[0]) || "img/default.png";
+
+    relatedBox.innerHTML += `
+      <div class="product-card" onclick="openProduct('${p.id}')">
+        <img src="${img}" />
+        <h3>${p.name}</h3>
+        <p class="price">₹${p.price}</p>
+      </div>
+    `;
+  });
 }
 
-/* ================= NAVIGATE ================= */
+/* ================= NAVIGATION ================= */
 function openProduct(id) {
   window.location.href = `product.html?id=${id}`;
 }
@@ -127,30 +124,26 @@ Price: ₹${currentProduct.price}`;
 };
 
 /* ================= IMAGE MODAL ================= */
-mainImg.addEventListener("click", () => {
+mainImg.onclick = () => {
   if (!currentProduct) return;
+
+  const images = currentProduct.images
+    ? currentProduct.images
+    : [currentProduct.image];
 
   imgModal.style.display = "flex";
   modalSlider.innerHTML = "";
 
-  currentProduct.images.forEach((img) => {
-    const image = document.createElement("img");
-    image.src = img;
-    image.style.display = "none";
-    modalSlider.appendChild(image);
+  images.forEach((img) => {
+    const i = document.createElement("img");
+    i.src = img;
+    i.style.display = "none";
+    modalSlider.appendChild(i);
   });
 
   currentIndex = 0;
   showImage(currentIndex);
-
-  if (currentProduct.images.length > 1) {
-    prevBtn.style.display = "block";
-    nextBtn.style.display = "block";
-  } else {
-    prevBtn.style.display = "none";
-    nextBtn.style.display = "none";
-  }
-});
+};
 
 function showImage(index) {
   const imgs = modalSlider.querySelectorAll("img");
@@ -159,91 +152,43 @@ function showImage(index) {
   });
 }
 
-function changeImg(direction) {
-  const total = currentProduct.images.length;
-  currentIndex += direction;
-
-  if (currentIndex < 0) currentIndex = total - 1;
-  if (currentIndex >= total) currentIndex = 0;
-
+function changeImg(dir) {
+  const imgs = modalSlider.querySelectorAll("img");
+  currentIndex += dir;
+  if (currentIndex < 0) currentIndex = imgs.length - 1;
+  if (currentIndex >= imgs.length) currentIndex = 0;
   showImage(currentIndex);
 }
 
-if (prevBtn && nextBtn) {
-  prevBtn.addEventListener("click", () => changeImg(-1));
-  nextBtn.addEventListener("click", () => changeImg(1));
-}
+prevBtn.onclick = () => changeImg(-1);
+nextBtn.onclick = () => changeImg(1);
 
 function closeModal() {
   imgModal.style.display = "none";
 }
 
 /* ================= SEE MORE ================= */
-if (seeMoreBtn) {
-  seeMoreBtn.addEventListener("click", () => {
-    fullDescEl.classList.toggle("expanded");
-    seeMoreBtn.innerText = fullDescEl.classList.contains("expanded")
-      ? "See less"
-      : "See more";
-  });
-}
-
+seeMoreBtn.onclick = () => {
+  fullDescEl.classList.toggle("expanded");
+  seeMoreBtn.innerText = fullDescEl.classList.contains("expanded")
+    ? "See less"
+    : "See more";
+};
 const highlightsList = document.getElementById("highlightsList");
-const trustBadgesContainer = document.getElementById("trustBadges");
 
 const productHighlights = [
-  "Eco-friendly material",
-  "Available in multiple colors",
-  "Free shipping over ₹500",
-  "1 Year Warranty",
-  "Premium quality",
-];
-
-const trustBadges = [
-  "✅ 100+ Happy Customers",
-  "🚚 Fast Delivery",
-  "💯 Verified Quality",
-  "💳 Secure Payments",
+  "Handpicked & Unique Designs",
+  "High-Quality Materials",
+  "Trendy & Stylish for Daily Wear",
+  "Perfect Gift for Loved Ones",
+  "Affordable Prices",
+  "Limited Stock – Grab Yours Fast",
+  "Fast & Safe Delivery",
 ];
 
 // Load highlights dynamically
-highlightsList.innerHTML = productHighlights
-  .map((item) => `<li>${item}</li>`)
-  .join("");
-
-// Load trust badges dynamically
-trustBadgesContainer.innerHTML = trustBadges
-  .map((badge) => `<span>${badge}</span>`)
-  .join("");
-
-// document.getElementById("addReviewBtn").addEventListener("click", async () => {
-//   const name = document.getElementById("rName").value.trim();
-//   const comment = document.getElementById("rComment").value.trim();
-//   const rating = parseInt(document.getElementById("rRating").value);
-
-//   if (!name || !comment || !rating) return alert("Fill all fields");
-
-//   try {
-//     const res = await fetch(
-//       `http://localhost:5000/api/products/review/${productId}`,
-//       {
-//         method: "POST",
-//         headers: { "Content-Type": "application/json" },
-//         body: JSON.stringify({ name, comment, rating }),
-//       },
-//     );
-
-//     if (!res.ok) throw new Error("Failed to add review");
-
-//     const updatedProduct = await res.json();
-//     renderReviews(updatedProduct.reviews);
-
-//     // Reset form
-//     document.getElementById("rName").value = "";
-//     document.getElementById("rComment").value = "";
-//     document.getElementById("rRating").value = "5";
-//   } catch (err) {
-//     console.error(err);
-//     alert("Something went wrong");
-//   }
-// });
+if (highlightsList) {
+  highlightsList.innerHTML = productHighlights
+    .map((item) => `<li>${item}</li>`)
+    .join("");
+}

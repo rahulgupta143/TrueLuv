@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hair | TrueLuv</title>
+    <title>Pendants | TrueLuv</title>
     <link rel="stylesheet" href="css/style.css" />
-
     <link rel="stylesheet" href="popup/popup.css" />
   </head>
+
   <body>
     <!-- HEADER -->
     <header>
@@ -17,14 +17,15 @@
       <nav class="heading">
         <ul>
           <li><a href="index.html">HOME</a></li>
-          <li><a href="pendant.html">Pendant</a></li>
+          <li><a href="pendant.html" class="active">Pendant</a></li>
           <li><a href="earring.html">Earring</a></li>
           <li><a href="ring.html">Ring</a></li>
+          <li><a href="hair.html">HAIR ACCESSORIES</a></li>
           <li><a href="cosmetics.html">COSMETICS</a></li>
         </ul>
       </nav>
 
-      <!-- HAMBURGER ICON -->
+      <!-- HAMBURGER -->
       <div class="heading1">
         <ion-icon name="menu" class="ham"></ion-icon>
       </div>
@@ -37,53 +38,44 @@
           <li><a href="pendant.html">Pendant</a></li>
           <li><a href="earring.html">Earring</a></li>
           <li><a href="ring.html">Ring</a></li>
+          <li><a href="hair.html">HAIR ACCESSORIES</a></li>
           <li><a href="cosmetics.html">COSMETICS</a></li>
         </ul>
       </div>
     </header>
 
-    <!-- Ionicons JS (must include for icons) -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-
+    <!-- PAGE TITLE -->
     <div class="page-title">
-      <h2>💖 Hair Accessories</h2>
-      <p>Cute • Trendy • Daily Wear</p>
+      <h2>💖 Pendants</h2>
+      <p>Elegant & Trendy Pendants</p>
     </div>
-    <section class="products" id="hairProducts"></section>
 
-    <!-- ===== MINI PRODUCT POPUP ===== -->
+    <!-- MINI PRODUCT POPUP -->
     <div class="mini-product-popup" id="miniProductPopup">
       <span class="mini-close" onclick="closeMiniProduct()">×</span>
-      <img id="miniPopupImg" src="" alt="Product" />
+      <img id="miniPopupImg" src="" alt="Pendant" />
       <div class="mini-details">
         <p class="mini-tag">Best Selling</p>
-        <h4 id="miniPopupName">Product Name</h4>
+        <h4 id="miniPopupName">Pendant Name</h4>
         <p id="miniPopupDesc">Short Description</p>
         <p class="mini-price" id="miniPopupPrice">₹0</p>
       </div>
       <button class="mini-dm-btn" onclick="popupOrder()">DM</button>
     </div>
 
-    <!-- ===== WHATSAPP + INSTAGRAM ===== -->
-    <a
-      href="https://wa.me/918928080078?text=I%20want%20to%20order%20from%20GlowAura"
-      class="whatsapp-float"
-      target="_blank"
-    >
+    <!-- PRODUCTS GRID -->
+    <section class="products" id="pendantProducts"></section>
+
+    <!-- WHATSAPP -->
+    <a href="https://wa.me/918928080078" class="whatsapp-float" target="_blank">
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
       />
     </a>
 
+    <!-- INSTAGRAM -->
     <a
-      href="https://www.instagram.com/"
+      href="https://www.instagram.com/trueluv_accessories"
       class="instagram-float"
       target="_blank"
     >
@@ -91,6 +83,45 @@
         src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
       />
     </a>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer0"><h1>TrueLuv</h1></div>
+      <div class="footer1">
+        Connect with us
+        <div class="social-media">
+          <a href="https://www.instagram.com/trueluv_accessories">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+          <a href="https://youtube.com/@trueluv_accessories">
+            <ion-icon name="logo-youtube"></ion-icon>
+          </a>
+        </div>
+      </div>
+      <div class="footer2">
+        <div class="product">
+          <div class="footer-heading">Categories</div>
+          <div class="div">Pendant</div>
+          <div class="div">Earring</div>
+          <div class="div">Ring</div>
+          <div class="div">Hair Accessories</div>
+          <div class="div">Cosmetics</div>
+        </div>
+        <div class="services">
+          <div class="footer-heading">Services</div>
+          <div class="div">DM Order</div>
+          <div class="div">Easy Return</div>
+          <div class="div">Fast Support</div>
+        </div>
+      </div>
+      <div class="footer3">
+        © 2024
+        <h4>TrueLuv</h4>
+        All Rights Reserved
+      </div>
+    </footer>
+
+    <!-- IONIC ICONS -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -99,8 +130,7 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-
-    <script src="js/hair.js"></script>
+    <script src="js/pendant.js"></script>
     <script src="js/script.js"></script>
     <script src="popup/popup.js"></script>
     <script src="popup/popupData.js"></script>
@@ -108,15 +138,14 @@
     <script>
       function dmOrder(name, price, img) {
         const message = `Hi, I want to order this product 👇
-    
 Product: ${name}
 Price: ₹${price}
 Image: ${window.location.origin}/${img}`;
 
-        const whatsappUrl =
-          "https://wa.me/918928080078?text=" + encodeURIComponent(message);
-
-        window.open(whatsappUrl, "_blank");
+        window.open(
+          "https://wa.me/918928080078?text=" + encodeURIComponent(message),
+          "_blank",
+        );
       }
     </script>
   </body>
