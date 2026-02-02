@@ -102,14 +102,15 @@
     "name": "Denley Luxe Lacquer",
     "price": 120,
     "category": "c1",
-    "desc": "Flawless finish with a high-shine glow.",
-    "fullDesc": "Indulge in the ultimate nail makeover with Denley’s Premium Nail Enamel collection. Designed for the modern woman, our formula delivers an ultra-pigmented, salon-quality finish right at home. 💅 From the calming vibes of ocean blue to the timeless elegance of earthy nudes, these shades are crafted to complement every skin tone and outfit.\n\nOur chip-resistant and long-wear formula ensures your manicure stays fresh, vibrant, and incredibly glossy for days.\n\nWhether you're heading to a brunch or a late-night party, let your hands do the talking with a touch of luxury and a whole lot of sparkle! ✨💖🌟",
+    "desc": "Get 4 Premium long-wear glossy nail colors. ✨",
+    "fullDesc": "Upgrade your manicure game with Denley1 Premium Nail Enamels. 💅✨\nDelivers salon-like shine with rich pigmentation and a smooth, streak-free finish.\nFrom elegant nudes to bold statement shades for every mood.\nQuick-dry, chip-resistant formula keeps nails fresh and flawless for days. 🌸💖\n\n✨ High-Gloss Finish – Salon-style shine\n🎨 Rich Pigmentation – Bold color in one to two coats\n⏳ Long-Lasting Wear – Chip-resistant formula\n🖌️ Smooth Brush Application – Even, streak-free coverage\n⚡ Quick Dry Formula – No long waiting time",
     "images": [
-      "img/nailpolishAll Product.png",
+      "img/Nailpolish4ColourImg.png",
       "img/orangenailpolish.jpeg",
       "img/bluenailpolish.jpeg",
       "img/creamnailpolish.jpeg",
-      "img/litecream.nailpolish.jpeg"
+      "img/litecream.nailpolish.jpeg",
+      "img/NailpolishAllColourImg.png"
     ],
     "stock": "In Stock"
   },
@@ -184,6 +185,54 @@
     ],
     "stock": "In Stock"
   },
+
+  {
+    "id": "c10",
+    "name": "H&N 36H Eyeliner",
+    "price": 60,
+    "category": "c1",
+    "desc": "Precision waterproof 36H liquid eyeliner. 🖋️",
+    "fullDesc": "Define your eyes with professional precision using the H&N Precision Liquid Eyeliner. 👁️\nFeatures a 36-hour long-wear, waterproof and smudge-proof formula for all-day perfection.\nThe fine-tip applicator ensures smooth, controlled application for subtle lines or bold wings.\nDelivers an intense deep-black finish that stays flawless day and night. 🖤✨",
+    "images": ["img/SecondeyelinerImg.png", "img/SecondeyelinerDetails.png"],
+    "stock": "In Stock"
+  },
+
+  {
+    "id": "c11",
+    "name": " HudaBeauty POP Kajal",
+    "price": 99,
+    "category": "c1",
+    "desc": "12H smudge-proof ultra black kajal.",
+    "fullDesc": "Make a bold statement with the HudaBeauty POP Ultra Kajal. 👁️‍🗨️\nPowered by Blink It technology, it is quick-drying, waterproof, and smudge-free for up to 12 hours.\nThe ultra-black, silky-smooth formula delivers intense definition for a dramatic, professional finish.\nPerfect for modern lifestyles that demand long-lasting performance. ⚡🔥",
+    "images": ["img/PopUltraKajolImg.png", "img/PopUltraKajolDetailImg.png"],
+    "stock": "In Stock"
+  },
+
+  {
+    "id": "c12",
+    "name": "Glamour Electric Eyeliner",
+    "price": 99,
+    "category": "c1",
+    "desc": "Precise liquid liner for bold eyes.",
+    "fullDesc": "Achieve an eye-in-bloom look with the Glamour Electric Liquid Eyeliner. 👁️\nThe sleek pen design allows effortless application with sharp, precise lines.\nIts smooth-flowing formula delivers rich, consistent color for a professional finish.\nPerfect for enhancing your natural eye beauty with ease. ✨🖋️",
+    "images": ["img/ThirdeyelinerIMg.png", "img/ThirdeyelinerDetails.png"],
+    "stock": "In Stock"
+  },
+
+  {
+    "id": "c13",
+    "name": "Premium Liquid Sindoor",
+    "price": 40,
+    "category": "c1",
+    "desc": "Get 2 Long-lasting liquid sindoor.",
+    "fullDesc": "Celebrate tradition with our Premium Liquid Sindoor Set. ❤️\nFeatures a rich, deep red pigment with a smooth liquid formula.\nPrecise applicator ensures a clean, flawless finish.\nSmudge-proof and water-resistant for all-day wear. ✨📿",
+    "images": [
+      "img/LiquidSindoorPackOfTowIMg.png",
+      "img/LiquidSindoorPackOfTowDetailsIMg.png"
+    ],
+    "stock": "In Stock"
+  },
+
   {
     "id": "h1",
     "name": "Shimmer Bow Headband",
@@ -259,6 +308,41 @@
     "fullDesc": "Add a touch of magic to her day with these Premium Teddy Bear Hair Clips! 🧸✨ This charming set of pink and purple clips is perfect for keeping hair in place while looking absolutely precious. 🌸\n\nDesigned with a secure yet comfortable grip, they are the ideal accessory for school, parties, or everyday fun. 🎀\n\nMake every hairstyle special with these lovable little companions! 💖🍭🌈",
     "images": ["img/hair.teddyClip.png"]
   },
+
+  {
+    "id": "h8",
+    "name": " Matte Pastel Hairbands",
+    "price": 80,
+    "category": "hair",
+    "desc": " Get 4 Chic matte finish pastel hairbands. .",
+    "fullDesc": "Add a sophisticated touch to your hairstyle with the Trueluv Matte Pastel Hairbands. 🎀\nThese headbands feature a premium matte finish and a unique scalloped edge design for a modern, minimalist look.\nAvailable in soft pastel shades like lavender, mint, and peach, they offer a comfortable, non-pinching fit.\nPerfect for work, school, or casual outings to keep your hair neat and stylish! ✨☁️",
+    "images": ["img/MatteHairBandIMg.png", "img/MatteHairBandWithBaby.png"]
+  },
+
+  {
+    "id": "h9",
+    "name": "Artificial Jasmine Gajra",
+    "price": 40,
+    "category": "hair",
+    "desc": "Get 2 Elegant jasmine hair accessory piece. .",
+    "fullDesc": "Enhance your traditional look with our Exquisite Artificial Jasmine Gajra. 🌸\nHandcrafted to mimic the beauty of fresh flowers, this stunning hair accessory features classic white jasmine blossoms accented with vibrant red and yellow rose highlights.\nIt is lightweight, durable, and designed to stay secure in your bun or braid all day long.\nPerfect for weddings, festivals, or any special occasion where you want to add a touch of timeless grace to your hairstyle! 🏹💖",
+    "images": ["img/gajra3.png", "img/gajra2.png", "img/Gajra1.png"]
+  },
+
+  {
+    "id": "h10",
+    "name": "Matte ZigZag Claws",
+    "price": 40,
+    "category": "hair",
+    "desc": "Get 2 Trendy matte finish hair claw clips",
+    "fullDesc": "Elevate your hair game with these stylish Matte ZigZag Hair Claw Clips! 🧷✨\nThese trendy clips feature a unique zigzag design with a matte finish that adds a modern twist to any hairstyle.\nThey are easy to use and provide a secure hold without damaging your hair.\nPerfect for adding a touch of flair to your everyday look or special occasions! 💫",
+    "images": [
+      "img/ZigZackHairClowImg1.png",
+      "img/ZigZackHairClowImg2.png",
+      "img/ZigZackHairClowDetailImg.png"
+    ]
+  },
+
   {
     "id": "ring1",
     "name": "Lavender Sparkle ",
