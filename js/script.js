@@ -13,13 +13,20 @@ closeMenu.addEventListener("click", () => {
 
 // DM Order (for home spotlight)
 function dmOrder(name, price, img) {
+  // Get current website base URL automatically
+  const baseUrl =
+    window.location.origin + window.location.pathname.replace(/\/[^\/]*$/, "/");
+
+  const fullImageUrl = baseUrl + img;
+
   const message = `Hi, I want to order this product 👇
 
 Product: ${name}
 Price: ₹${price}
-Image: ${img}`;
+Image: ${fullImageUrl}`;
 
   const whatsappUrl =
     "https://wa.me/918928080078?text=" + encodeURIComponent(message);
+
   window.open(whatsappUrl, "_blank");
 }
